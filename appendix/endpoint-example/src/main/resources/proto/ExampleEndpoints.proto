@@ -1,0 +1,14 @@
+option java_package = "coprocessor.endpoint";
+option java_outer_classname = "ExampleEndpoints";
+option java_generic_services = true;
+
+message ColumnCountRequest {
+}
+
+message ColumnCountResponse {
+  required int64 count = 1 [default = 0];
+}
+
+service ColumnCountService {
+  rpc getColumnCount(ColumnCountRequest) returns (ColumnCountResponse);
+}
