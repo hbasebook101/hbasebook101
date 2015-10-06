@@ -62,7 +62,7 @@ public class AccessCounterServiceImpl implements AccessCounterService {
 
     Date date = new Date();
     SimpleDateFormat hourlyFormat = new SimpleDateFormat("yyyyMMddHH");
-    SimpleDateFormat dailyFormat = new SimpleDateFormat("yyyyMMddHH");
+    SimpleDateFormat dailyFormat = new SimpleDateFormat("yyyyMMdd");
 
     List<Row> increments = new ArrayList<>();
 
