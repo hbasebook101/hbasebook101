@@ -180,7 +180,7 @@ public class MessagingServiceImpl implements MessagingService {
     message.setUserId(Bytes.toLong(result.getValue(Bytes.toBytes("m"), Bytes.toBytes("userId"))));
     message.setBody(Bytes.toString(result.getValue(Bytes.toBytes("m"), Bytes.toBytes("body"))));
     message.setMessageId(Bytes.toString(result.getValue(Bytes.toBytes("m"), Bytes.toBytes("messageId"))));
-    message.setPostAt(Long.MAX_VALUE - (long) messageRowSchema.decode(new SimplePositionedByteRange(result.getRow()), 1));
+    message.setPostAt(Long.MAX_VALUE - (long) messageRowSchema.decode(new SimplePositionedByteRange(result.getRow()), 2));
 
     return message;
   }
