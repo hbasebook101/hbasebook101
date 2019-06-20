@@ -208,7 +208,7 @@ public class AccessCounterServiceImpl implements AccessCounterService {
           time.setTime(sdf.parse(Bytes.toString(yyyyMMddHH)));
 
           accessCount.setTime(time);
-          accessCount.setDomain(reverseDomain(domain));
+          accessCount.setDomain(domain);
           accessCount.setCount(Bytes.toLong(value));
 
           ret.add(accessCount);
@@ -252,7 +252,7 @@ public class AccessCounterServiceImpl implements AccessCounterService {
           time.setTime(sdf.parse(Bytes.toString(qualifier)));
 
           accessCount.setTime(time);
-          accessCount.setDomain(reverseDomain(domain));
+          accessCount.setDomain(domain);
           accessCount.setCount(Bytes.toLong(value));
 
           ret.add(accessCount);
